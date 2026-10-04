@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | SR Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="auth">
+
+    <!-- Left: branding panel -->
+    <section class="brand">
+      <div class="brand-logo">SR</div>
+      <h1>Welcome back</h1>
+      <p>Sign in to access your dashboard and continue where you left off.</p>
+      <ul class="brand-points">
+        <li><i class="fa-solid fa-shield-halved"></i> Secure and validated sign in</li>
+        <li><i class="fa-solid fa-bolt"></i> Fast and responsive design</li>
+        <li><i class="fa-solid fa-mobile-screen"></i> Works on every device</li>
+      </ul>
+    </section>
+
+    <!-- Right: form panel -->
+    <section class="form-panel">
+      <div class="card">
+        <h2>Sign in</h2>
+        <p class="subtitle">Enter your credentials to continue</p>
+
+        <form id="loginForm" novalidate>
+
+          <div class="field">
+            <label for="email">Email address</label>
+            <div class="input-wrap">
+              <i class="fa-regular fa-envelope icon-left"></i>
+              <input type="email" id="email" placeholder="you@example.com" autocomplete="email">
+            </div>
+            <span class="error" id="emailError"></span>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-lock icon-left"></i>
+              <input type="password" id="password" placeholder="Enter your password" autocomplete="current-password">
+              <button type="button" class="toggle-pass" id="togglePass" aria-label="Show password">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+            <span class="error" id="passwordError"></span>
+          </div>
+
+          <div class="row">
+            <label class="remember">
+              <input type="checkbox" id="remember">
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="link">Forgot password?</a>
+          </div>
+
+          <div class="alert" id="formAlert" role="alert"></div>
+
+          <button type="submit" class="btn" id="loginBtn">
+            <span class="btn-text">Sign in</span>
+            <span class="spinner"></span>
+          </button>
+
+        </form>
+
+        <div class="divider"><span>or continue with</span></div>
+
+        <div class="social">
+          <button type="button" class="social-btn" data-provider="Google"><i class="fa-brands fa-google"></i> Google</button>
+<button type="button" class="social-btn" data-provider="GitHub"><i class="fa-brands fa-github"></i> GitHub</button>
+        </div>
+
+        <p class="demo">Demo login: <strong>demo@sr.com</strong> / <strong>Demo@123</strong></p>
+        <p class="switch">Don't have an account? <a href="#" class="link">Create one</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
